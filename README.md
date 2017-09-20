@@ -1,4 +1,4 @@
-# Discord SelfBot.py
+# discord-selfbot.py
 
 This is my personal Discord self-bot. Feel free to host and use it yourself.
 
