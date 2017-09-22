@@ -38,7 +38,9 @@ async def compile_tex(snippet):
     async with aiofiles.open('tmp/snippet.tex', mode='w') as f:
         await f.write(source)
 
-    proc_latex = await asyncio.create_subprocess_exec('pdflatex', 'snippet.tex', cwd='tmp/')
+    proc_latex = await asyncio.create_subprocess_exec('pdflatex', 
+                                                      '-shell-escape',
+                                                      'snippet.tex', cwd='tmp/')
     await proc_latex.wait()
 
     proc_convert = await asyncio.create_subprocess_exec('convert',
