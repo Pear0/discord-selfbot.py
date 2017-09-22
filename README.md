@@ -15,13 +15,13 @@ First, you must have the following commands available in your PATH:
 - `convert` (part of ImageMagick)
 
 Create a virtual environment with Python >= 3.5 and activate it:
-```python
+```shell
 $ virtualenv -p python3.5 venv
 $ source venv/bin/activate
 ```
 
 Install the dependencies:
-```python
+```shell
 $ pip install -r requirements.txt
 ```
 
@@ -34,7 +34,7 @@ Create a file called `config.json` at the root level with the field `token` cont
 ```
 
 Then run the bot:
-```python
+```shell
 $ ./launch.sh
 ```
 
