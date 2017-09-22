@@ -10,10 +10,33 @@ For example, send the message `>tex $$\int_{a}^{b} x^2 dx$$` will trigger the se
 
 ## Usage
 
-To use this bot, you must create a file called `config.json` at the root level with the field `token` containing your self token.
+First, you must have the following commands available in your PATH:
+- `pdflatex` 
+- `convert` (part of ImageMagick)
+
+Create a virtual environment with Python >= 3.5 and activate it:
+```python
+$ virtualenv -p python3.5 venv
+$ source venv/bin/activate
+```
+
+Install the dependencies:
+```python
+$ pip install -r requirements.txt
+```
+
+Create a file called `config.json` at the root level with the field `token` containing your self token.
 
 ```json
 {
   "json": "token here"
 }
 ```
+
+Then run the bot:
+```python
+$ ./launch.sh
+```
+
+
+
